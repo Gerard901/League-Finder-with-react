@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-primary mb-3'>
       <div className='container'>
-        <a className='navbar-brand' href='#'>
+        <a className='navbar-brand' href='body'>
           League Finder
         </a>
       </div>

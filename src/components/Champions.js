@@ -1,52 +1,58 @@
 import React, { Component } from 'react';
-import Division from './Division';
 
 class Champions extends Component {
-  state = {
-    champion_name: 'Leesin',
-    avatar_id: '3',
-    summoner_lvl: 222,
-    champion_points: 632432
-  };
-
   render() {
+    const {
+      champion_points1,
+      champion_points2,
+      champion_points3,
+      name1,
+      name2,
+      name3,
+      title
+    } = this.props;
+
     return (
       <div className='card mb-3'>
-        <h3 className='card-header text-center'>BEST CHAMPIONS</h3>
+        <h3 className='card-header text-center'>{title}</h3>
         <ul className='list-group list-group-flush'>
           <li className='list-group-item d-flex'>
             <img
               style={{ width: '30', display: 'block' }}
-              src={'./champion/' + this.state.champion_name + '.png'}
+              src={'./champion/' + name1 + '.png'}
+              alt=''
             ></img>
             <h4 className='ml-3 card-title'>
               Mastery points:<br></br>
               <span className='mt-2 badge badge-pill badge-warning'>
-                {this.state.champion_points}
+                {' '}
+                {champion_points1}
               </span>
             </h4>
           </li>
           <li className='list-group-item d-flex'>
             <img
               style={{ width: '30', display: 'block' }}
-              src={'./champion/' + this.state.champion_name + '.png'}
+              src={'./champion/' + name2 + '.png'}
+              alt=''
             ></img>
             <h4 className='ml-3 card-title'>
               Mastery points:<br></br>
               <span className='mt-2 badge badge-pill badge-warning'>
-                {this.state.champion_points}
+                {champion_points2}
               </span>
             </h4>
           </li>
           <li className='list-group-item d-flex'>
             <img
               style={{ width: '30', display: 'block' }}
-              src={'./champion/' + this.state.champion_name + '.png'}
+              src={'./champion/' + name3 + '.png'}
+              alt=''
             ></img>
             <h4 className='ml-3 card-title'>
               Mastery points:<br></br>
               <span className='mt-2 badge badge-pill badge-warning'>
-                {this.state.champion_points}
+                {champion_points3}
               </span>
             </h4>
           </li>
